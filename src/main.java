@@ -22,5 +22,6 @@ if (Decadeselected != "60" || Decadeselected != "70" || Decadeselected != "80" |
 else {
     System.out.println(Decades.printlist(Decadeselected));
 }
+//grafical interface creation
     }
 }
