@@ -4,6 +4,7 @@ import java.util.List;
 
 public class main {
     public static void main(String[]args){
+        new GUI();
         List<String> instruments = new ArrayList<>();
        instruments.add("Gutiar");
        instruments.add("harmonica");
@@ -20,7 +21,7 @@ String Decadeselected = JOptionPane.showInputDialog("Skriv inn et tiår");
 
 if (Decadeselected != "60" || Decadeselected != "70" || Decadeselected != "80" || Decadeselected != "90") JOptionPane.showMessageDialog(null, "Skriv inn et helt tiår");
 else {
-    System.out.println(Decades.printlist(Decadeselected));
+
 }
 //grafical interface creation
     }

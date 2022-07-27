@@ -76,12 +76,14 @@ public class Decades {
     }
 
     public List<Album>printlist(String decadeselected){
-            if (decadeselected == "60") return sixties;
-            if (decadeselected =="70") return seventies;
-            if (decadeselected == "80") return eightties;
-            if (decadeselected == "90") return ninties;
-            if (decadeselected == "00") return thousands;
-            if (decadeselected == "10") return thousandandten;
-    else return null;
+         List<Album>printedlist = new ArrayList<>();
+            if (decadeselected == "60") printedlist = sixties;
+            if (decadeselected =="70") printedlist = seventies;
+            if (decadeselected == "80") printedlist = eightties;
+            if (decadeselected == "90") printedlist = ninties;
+            if (decadeselected == "00") printedlist = thousands;
+            if (decadeselected == "10") printedlist = thousandandten;
+     else printedlist = null;
+     return printedlist;
     }
 }
