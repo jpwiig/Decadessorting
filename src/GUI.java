@@ -3,28 +3,39 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
 public class GUI implements ActionListener {
+    //declaration of enities in the GUI
     private JFrame guiFrame;
     private JPanel guiPanel;
     private JButton guibutton;
     private JTextField guifeild;
     private JRadioButton guiRadio;
 
+    private JButton exitbutton;
+
     public GUI() {
+
+        //GUI items
         guiFrame = new JFrame();
         guiPanel = new JPanel();
         guibutton = new JButton("Press here to show the decade");
         guifeild = new JTextField("Choose a decade");
         guiRadio = new JRadioButton("hei");
+        exitbutton = new JButton("exit");
 
+        //panel layout
         guiPanel.setBorder(BorderFactory.createEmptyBorder(120, 120, 120, 120));
         guiPanel.setLayout(new GridLayout(3, 4));
         guiPanel.add(guibutton);
         guiPanel.add(guifeild);
         guiPanel.add(guiRadio);
+        guiPanel.add(exitbutton);
 
+        //frame to make the gui visible
         guiFrame.add(guiPanel, BorderLayout.CENTER);
-        guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        guiFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         guiFrame.setTitle("AlbumLookUp");
         guiFrame.pack();
         guiFrame.setVisible(true);
