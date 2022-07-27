@@ -75,15 +75,16 @@ public class Decades {
         if (album.getReleaseyear() <= 2010 && album.getReleaseyear() > 2020) thousandandten.add(album);
     }
 
-    public List<Album>printlist(String decadeselected){
-         List<Album>printedlist = new ArrayList<>();
-            if (decadeselected == "60") printedlist = sixties;
-            if (decadeselected =="70") printedlist = seventies;
-            if (decadeselected == "80") printedlist = eightties;
-            if (decadeselected == "90") printedlist = ninties;
-            if (decadeselected == "00") printedlist = thousands;
-            if (decadeselected == "10") printedlist = thousandandten;
-     else printedlist = null;
-     return printedlist;
+    public List<Album> printlist(String decadeselected) {
+        List<Album> printedlist = new ArrayList<>();
+        int checkdecade = Integer.parseInt(decadeselected);
+        if (checkdecade <= 1960 && checkdecade > 1970) printedlist = sixties;
+        if (checkdecade <= 1970 && checkdecade > 1980) printedlist = seventies;
+        if (checkdecade <= 1980 && checkdecade > 1990) printedlist = eightties;
+        if (checkdecade <= 1990 && checkdecade > 2000) printedlist = ninties;
+        if (checkdecade <= 2000 && checkdecade > 2010) printedlist = thousands;
+        if (checkdecade <= 2010 && checkdecade > 2020) printedlist = thousandandten;
+        else printedlist = null;
+        return printedlist;
     }
 }
